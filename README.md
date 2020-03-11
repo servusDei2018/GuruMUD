@@ -1,6 +1,10 @@
 # GuruMUD
 [WORK-IN-PROGRESS] A fast, lightweight, minimal MUD client in Go
 
+## Status
+
+Currently the **client is not operational.**
+
 ## Features
 
 - [x] 100% Cross Platform (Windows, Mac, Linux)
