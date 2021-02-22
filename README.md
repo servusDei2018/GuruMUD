@@ -16,4 +16,4 @@ Contributions are welcome. Bearing in mind that this is a minimal work, heavy fe
 
 ## License
 
-This project is released under the MIT License.
+This project is released under the MIT License. See `LICENSE`.
