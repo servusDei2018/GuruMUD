@@ -1,2 +1,8 @@
+benchmark:
+	go test -bench
+
+test:
+	go test
+
 all:
-	go build GuruMUD.go
+	go build -ldflags="-s -w"
