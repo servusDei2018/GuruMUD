@@ -1,5 +1,5 @@
 # GuruMUD
-[WORK-IN-PROGRESS] A fast, lightweight, minimal MUD client in Go
+A fast, lightweight, minimal MUD client in Go
 
 ## Status
 
