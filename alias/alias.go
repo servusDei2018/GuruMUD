@@ -5,8 +5,11 @@ import (
 	"strings"
 )
 
+// An Alias represents an alias.
 type Alias struct {
+	// This Alias's name.
 	Name string
+	// The command this Alias represents.
 	Command string
 }
 
