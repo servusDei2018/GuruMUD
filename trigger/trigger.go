@@ -17,16 +17,24 @@ type Trigger struct {
 
 // NewTrigger returns a new Trigger.
 func NewTrigger(name, trigger, response string) (*Trigger, error) {
-	if len(name)<3{return Trigger{}, errors.New("trigger: name too short")}
-	if len(trigger)<3{return Trigger{}, errors.New("trigger: trigger too short")}
-	if len(response)<1{return Trigger{}, errors.New("trigger: response too short")}
+	if len(name) < 3 {
+		return &Trigger{}, errors.New("trigger: name too short")
+	}
+	if len(trigger) < 3 {
+		return &Trigger{}, errors.New("trigger: trigger too short")
+	}
+	if len(response) < 1 {
+		return &Trigger{}, errors.New("trigger: response too short")
+	}
 
 	return &Trigger{Name: name, Trigger: trigger, Response: response}, nil
 }
 
 // Check checks whether the trigger is activated.
 func (t *Trigger) Check(s string) bool {
-	if strings.Contains(s, t.Trigger) {return true}
+	if strings.Contains(s, t.Trigger) {
+		return true
+	}
 
 	return false
 }
