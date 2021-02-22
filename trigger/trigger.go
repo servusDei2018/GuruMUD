@@ -5,13 +5,17 @@ import (
 	"strings"
 )
 
+// A Trigger represents a trigger.
 type Trigger struct {
+	// This Trigger's name.
 	Name string
+	// Text which activates this Trigger.
 	Trigger string
+	// A `;` delimited string containing response commands.
 	Response string
 }
 
-// NewTrigger returns a new trigger.
+// NewTrigger returns a new Trigger.
 func NewTrigger(name, trigger, response string) (*Trigger, error) {
 	if len(name)<3{return Trigger{}, errors.New("trigger: name too short")}
 	if len(trigger)<3{return Trigger{}, errors.New("trigger: trigger too short")}
