@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"net"
 
-	"tmpfs/alias"
-	"tmpfs/trigger"
+	"github.com/servusDei2018/GuruMUD/alias"
+	"github.com/servusDei2018/GuruMUD/trigger"
 )
 
 const (
@@ -31,14 +31,14 @@ func main() {
 	}
 }
 
-// Show header and version
+// header show the header and version.
 func header() {
 	fmt.Println("-------- GuruMUD --------")
 	fmt.Printf("Version: %v\n", version)
 	fmt.Println("-------------------------")
 }
 
-// Read one line of input from stdin. Blocking.
+// input reads one line of input from stdin. blocking.
 func input() string {
 	var bfr string
 	fmt.Scanf("%s\n", &bfr)
@@ -46,7 +46,7 @@ func input() string {
 	return bfr
 }
 
-// Parse a string and execute it accordingly
+// parse parses a string and executes it accordingly.
 func parse(s string) string {
 	if len(s)>1 {
 		if s[0]=="#" {
@@ -65,7 +65,7 @@ func parse(s string) string {
 	}else{if isConnected{send(s)}}
 }
 
-// Standardize a string to use uniform whitespace
+// Standardize standardizes a string to use uniform whitespace.
 func standardize(s string) {
 	for i:=len(s);i>0;i-- {
 		s=strings.Replace(strings.Repeat(" ",i)," ")
